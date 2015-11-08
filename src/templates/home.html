@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Welcome | {{ block.super }}{% endblock %}
+
+<style>
+    {% block style %}
+    .navbar-static-top {
+        margin-bottom: 0px !important;
+    }
+    
+    .jumbotron {
+        background-color: rgba(108,1,1,1);
+        color: ivory;
+    }
+    {% endblock %}
+</style>
+
+{% block jumbotron %}
+<div class='jumbotron'>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <h1>JW Blog</h1>
+                <p>An example django project built by Jeff Wang.</p>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="{% url 'about' %}" role="button">Find out more &raquo;</a>
+                </p>
+            </div>
+            <div class='col-sm-6'>
+                <img src="http://www.facets.la/wallpaper/W_2013_319_DOWN.jpg" class='img-responsive' />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class='col-sm-2'>
+    <p class='lead text-align-center'>Bio<br/><br/><a class="fa fa-user fa-5x" href="{% url 'bio' %}" style='color:#337AB7;'></a></p>
+  </div>
+  <div class='col-sm-2'>
+    <p class='lead text-align-center'>Articles<br/><br/><a class="fa fa-file-text fa-5x" href="{% url 'articles' %}" style='color:#337AB7;'></a></p>
+  </div>
+  <div class='col-sm-2'>
+    <p class='lead text-align-center'>Photos<br/><br/><a class="fa fa-camera-retro fa-5x" href="{% url 'photos' %}" style='color:#337AB7;'></a></p>
+  </div>
+  <div class='col-sm-2'>
+    <p class='lead text-align-center'>Videos<br/><br/><a class="fa fa-video-camera fa-5x" href="{% url 'videos' %}" style='color:#337AB7;'></a></p>
+  </div>
+  
+  <div class="col-sm-3">
+    <p class= 'lead text-align-center'>{{ title }}</p>
+    <form method='POST' action=''>{% csrf_token %}
+    {{ form|crispy }}
+    <input class='bin btn-primary' type='submit' value='Sign Up' />
+    </form>
+  </div>
+  
+  
+  
+</div>
+{% endblock %}

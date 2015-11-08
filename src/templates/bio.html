@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--{% block head_title %}{{ block.super }} | Bio{% endblock %}
+-->
+
+<style>
+    {% block style %}
+    .navbar-static-top {
+        margin-bottom: 0px !important;
+    }
+    
+    .jumbotron {
+        background-color: rgba(108,1,1,1);
+        color: ivory;
+    }
+    {% endblock %}
+</style>
+
+<div class='jumbotron'>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <h1>My Links</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='container'>
+    <div>
+        
+    </div>
+</div>
+
+{% endblock %}

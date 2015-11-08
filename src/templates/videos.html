@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<!--{% block head_title %}{{ block.super }} | Videos{% endblock %}
+-->
+
+<style>
+    {% block style %}
+    .navbar-static-top {
+        margin-bottom: 0px !important;
+    }
+    
+    .jumbotron {
+        background-color: rgba(108,1,1,1);
+        color: ivory;
+    }
+    {% endblock %}
+</style>
+
+<div class='jumbotron'>
+    <div class="container">
+        <div class="row">
+            <div>
+                <h1>Videos</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+body {
+  min-height: 2000px;
+}
+
+.navbar-static-top {
+  margin-bottom: 0px !important;
+  background-color: #440707;
+}
+
+.navbar-default .navbar-brand {
+  color: inherit;
+}
